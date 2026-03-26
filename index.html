@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <title>HACK EUROPA 2.0 | Certificate</title>
+  </head>
+  <body>
+    <!-- Animated Background Elements -->
+    <div class="glow glow-1"></div>
+    <div class="glow glow-2"></div>
+    <div class="glow glow-3"></div>
+    
+    <div class="container">
+      <header>
+        <div class="header-org-text">
+          <p class="org-name">STUDENTS ASSOCIATION OF IT</p>
+          <p class="school-name">SCHOOL OF ENGINEERING, CUSAT</p>
+        </div>
+        <h1 class="main-title">HACK EUROPA 2.0</h1>
+        <h2 class="subtitle">ABHIJIT MENON MEMORIAL ENDOWMENT HACKATHON</h2>
+      </header>
+
+      <main>
+        <div class="search-box glass-panel">
+          <input type="text" id="searchInput" placeholder="Enter your full name to verify your certificate..." autocomplete="off"/>
+          <button id="searchBtn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="search-icon"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          </button>
+        </div>
+
+        <!-- Autocomplete Suggestions -->
+        <div id="suggestionsBox" class="suggestions-box hidden"></div>
+
+        <!-- Landing Context Text (Disappears on Search) -->
+        <section id="landingInfo" class="landing-info fade-in">
+          <div class="info-card glass-panel">
+            <p><strong>Hack Europa 2.0</strong> was a 10-hour hackathon on "Scalable Innovation Technology" with <strong>300+ participants</strong> and <strong>75+ teams</strong> across four venues, building real world, scalable solutions in software and hardware.</p>
+          </div>
+          <div class="info-card glass-panel">
+            <p>Supported by <strong>15 mentors</strong> and <strong>4 judges</strong> through multiple structured evaluations, and organized by <strong>20+ IT students</strong>, the event was more than a competition; it was a platform for impactful innovation and strong collaboration.</p>
+          </div>
+        </section>
+
+        <!-- Result Area -->
+        <div id="resultArea" class="result-area hidden">
+          <div class="verification-badge glass-panel success">
+            <div class="badge-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+            </div>
+            <div class="badge-content">
+              <h3>Verified Participant</h3>
+              <p class="participant-name" id="participantName">John Doe</p>
+              <div class="verification-details">
+                <span class="detail-tag">Issued by: <strong>SAIT, CUSAT</strong></span>
+              </div>
+            </div>
+            <a href="#" id="viewPdfBtn" class="download-btn shadow-btn" target="_blank">
+              Open Original
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            </a>
+          </div>
+
+          <div class="certificate-preview glass-panel">
+            <iframe id="pdfViewer" src="" frameborder="0"></iframe>
+          </div>
+        </div>
+        
+        <!-- Not Found Area -->
+        <div id="notFoundArea" class="result-area hidden">
+          <div class="verification-badge glass-panel error">
+            <div class="badge-icon error">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>
+            </div>
+            <div class="badge-content">
+              <h3>Not Found</h3>
+              <p>We couldn't find a certificate for this name.</p>
+              <p class="suggestion">Make sure your name exactly matches the registration.</p>
+            </div>
+          </div>
+        </div>
+
+      </main>
+      
+      <footer>
+        <h3 class="stats-footer">300+ PARTICIPANTS . 75+ TEAMS . 1 HACKATHON</h3>
+      </footer>
+    </div>
+    
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
+
