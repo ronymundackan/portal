@@ -18,17 +18,32 @@
   font-family: 'Inter', system-ui, sans-serif;
 }
 
+html {
+  background-color: #1a0b36; /* Dark fallback for iOS Safari */
+  min-height: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
 body {
-  background: var(--bg-gradient);
+  background-image: var(--bg-gradient);
+  background-color: #1a0b36; /* Fallback */
   background-size: 400% 400%;
   animation: gradientBG 15s ease infinite;
+  -webkit-animation: gradientBG 15s ease infinite;
   color: var(--text-primary);
   min-height: 100vh;
+  min-height: -webkit-fill-available; /* Fixes iOS Safari 100vh bug */
   display: flex;
   flex-direction: column;
   align-items: center;
   overflow-x: hidden;
   position: relative;
+}
+
+@-webkit-keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 @keyframes gradientBG {
